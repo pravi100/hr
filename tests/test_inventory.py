@@ -29,7 +29,7 @@ def test_inventory_load():
     """)
     inv_file.close()
 
-    user_list = inventory.load(inv_file.name)
+    users_list = inventory.load(inv_file.name)
     assert users_list[0] == {
         'name': 'kevin',
         'groups': ['wheel', 'dev'],
@@ -56,7 +56,7 @@ def test_inventory_dump(mocker):
     dest_file = tempfile.NamedTemporaryFile(delete=False)
     dest_file.close()
 
-    mocker.patch('spwd.getspname', return_value=mocker.Mock(sp_pwd='password'))
+    mocker.patch('spwd.getspnam', return_value=mocker.Mock(sp_pwd='password'))
 
     mocker.patch('grp.getgrall', return_value=[
         mocker.Mock(gr_name='super', gr_mem=['bob']),

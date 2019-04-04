@@ -1,5 +1,4 @@
-import argparse
-
+from argparse import Action, ArgumentParser
 
 def create_parser():
     parser = ArgumentParser(description="""

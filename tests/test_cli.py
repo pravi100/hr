@@ -1,4 +1,5 @@
 import pytest
+import argparse
 
 from hr import cli
 
