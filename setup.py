@@ -6,11 +6,14 @@ with open('README.rst', encoding='UTF-8') as f:
 setup(
     name='hr',
     version='0.1.0',
-    description='manage users on a server based on an inventory JSON file',
+    description='Commandline user management utility',
     long_description=readme,
     author='praveen',
     author_email='praveenchigurupati2012@gmail.com',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    install_requires=[]
+    install_requires=[],
+    entry_points={
+        'console_scripts': 'hr=hr.cli:main',
+    },
 )
