@@ -6,6 +6,6 @@ def create_parser():
     manage users on a server based on an inventory JSON file
     """)
     parser.add_argument('path', help='the path to the inventory file (JSON)')
-    parser.add_argument("--export", action='store_false', help='export current settings to inventory file')
+    parser.add_argument("--export", action='store_true', help='export current settings to inventory file')
     return parser
 
